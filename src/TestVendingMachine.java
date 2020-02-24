@@ -1,9 +1,10 @@
 public class TestVendingMachine {
 	public static void main(String[] args){
 		VendingMachine vm = new VendingMachine();
-		vm.printOptions();
+		VendingProxy vmp = new VendingProxy(vm);
+		vmp.printOptions();
 		while(true){
-			vm.printMenu();
+			vmp.printMenu();
 		}
 	}
 }
